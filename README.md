@@ -1,4 +1,4 @@
-Install Magisk On Official Android Emulator
+Install Magisk On Official Android Emulator For M1 Mac
 ===========================================
 
 Works on Android API 30 only
