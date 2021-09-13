@@ -143,6 +143,8 @@ mv ${TMP_DIR}${COMMON}/* $MAGISK_DIR
 chmod 755 $MAGISK_DIR/*
 if [[ -n $USES_ZIP_IN_APK ]]; then
   mv magisk.zip $MAGISK_DIR/magisk.apk
+  $IS64BIT && mv -f $MAGISK_DIR/magiskinit64 $MAGISK_DIR/magiskinit
+  $IS64BIT && mv -f $MAGISK_DIR/magiskboot64 $MAGISK_DIR/magiskboot
 else
   $IS64BIT && mv -f $MAGISK_DIR/magiskinit64 $MAGISK_DIR/magiskinit || rm -f $MAGISK_DIR/magiskinit64
   $MAGISK_DIR/magiskinit -x magisk $MAGISK_DIR/magisk
